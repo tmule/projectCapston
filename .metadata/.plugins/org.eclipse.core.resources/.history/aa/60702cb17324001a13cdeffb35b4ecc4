@@ -1,0 +1,20 @@
+#%RAML 1.0
+title: bookApi
+
+/book:
+ get:
+  body:
+    application/json:
+      example:
+        {
+         "title":"bk1",
+         "date":"2018",
+         "author":"john"}
+ post:
+   body:
+     application/json:
+       example:
+         {
+          "title":"bk2",
+          "date":"2019",
+          "author":"piter"}

@@ -1,0 +1,91 @@
+#%RAML 1.0
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/298dee6e-347e-4492-bf4b-5f3cdf847802/ # 
+version: 2.0
+title: capstone1
+/users:
+  description: " All users"
+  get:
+    description: "Get the list of all users"
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include Get_All_Users.json
+      400:
+        body:
+          application/json:
+            example: "sorry not found!"
+              
+              
+           
+  post:
+    description: "Add a user to a list of users  "
+    body:
+      application/json:
+        example: !include Post_User_Request.json          
+    responses:
+      201:
+        body:
+          application/json:
+            example: !include Post_User_Request.json
+            
+      400:
+        body:
+          application/json:
+            examples:
+               {
+            "message": "bad request"
+            }
+       
+  /{id}:
+    description: retrive or read single user 
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include Get_User.json
+        404:
+          body:
+            application/json:
+              example: "sorry user not found!"
+    put:
+      body:
+        application/json:
+          example: !include Put_User_Request.json
+      responses:
+        202:
+          body:
+            application/json:
+              example: !include Put_User_Request.json
+                
+          
+
+           
+    
+
+       
+    delete:
+      responses:
+        200:
+          body:
+            application/json:
+              example: " User Deleted"
+        404:
+          body:
+            application/json:
+              example: "sorry user not found!"
+                
+                
+      
+  
+    
+    
+
+            
+              
+              
+
+              
+              
+      

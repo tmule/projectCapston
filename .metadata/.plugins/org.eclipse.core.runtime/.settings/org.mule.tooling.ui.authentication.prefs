@@ -1,0 +1,4 @@
+authenticated.users=[{"id"\:"c3065986-55c6-4bb2-84f5-91af2518c749","token"\:"c8fe2de2-f293-40b0-97fa-be1224842fd8","userId"\:"ttmule","refreshToken"\:"","baseUrl"\:"https\://anypoint.mulesoft.com/"}]
+current.token=c8fe2de2-f293-40b0-97fa-be1224842fd8
+current.user=ttmule
+eclipse.preferences.version=1
